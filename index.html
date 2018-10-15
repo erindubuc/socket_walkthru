@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Socket Example</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+        
+    </head>
+<body>
+    <h1>SOCKETS!</h1>
+<script>
+    var socket = io("https://workspace-2-erindubuc.c9users.i:8080");
+    socket.on("connect", function(data){
+        alert("connected");
+        socket.emit("ping", "words");
+        })
+</script>
+</body>
+</html>
